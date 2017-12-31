@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "康爱多掌上药店",
+    "description": "简短描述你的应用是什么",
+    "sdkVersion": "23.0.0",
+    "version": "1.1.1",
+    "icon": "common/res/logo.png",
+    "portrait": "portrait"
+  },
+  "name": "reactnativeantmdemo",
+  "displayName": "康爱多掌上药店"
+}

@@ -1,0 +1,6 @@
+{
+    //js文件默认关联 javascript javascriptreact
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+}
