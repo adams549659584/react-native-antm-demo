@@ -2,11 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, AppRegistry } from 'react-native';
 import { Button, Toast } from 'antd-mobile';
 import SearchPage from './../search/SearchPage';
+import { AppRouteName } from './../../App';
 
 export default class MainPage extends React.Component {
     static navigationOptions = ({ navigation }) => {
         const { state, setParams } = navigation;
-        
         return {
             // title: '首页'
             header: null,
@@ -14,7 +14,9 @@ export default class MainPage extends React.Component {
     };
 
     goSearch = () => {
-        Toast.info('去搜索', Toast.SHORT);
+        const { navigate } = this.props.navigation;
+        navigate(AppRouteName.Search);
+        // Toast.info('去搜索', Toast.SHORT);
     }
 
     render() {

@@ -5,15 +5,20 @@ import { StackNavigator } from 'react-navigation';
 import MainPage from './page/main/MainPage';
 import SearchPage from './page/search/SearchPage';
 
-const SimpleApp = StackNavigator({
-  Main: { screen: MainPage },
-  Search: { screen: SearchPage }
+export const AppRouteName = {
+  Main: 'Main',
+  Search: 'Search'
+}
+
+const AppNavigator = StackNavigator({
+  [AppRouteName.Main]: { screen: MainPage },
+  [AppRouteName.Search]: { screen: SearchPage }
 })
 
 export default class App extends React.Component {
   render() {
     return (
-      <SimpleApp />
+      <AppNavigator />
     );
   }
 }
