@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, AppRegistry } from 'react-native';
-import { Button, Toast } from 'antd-mobile';
+import { Button, Toast, Flex } from 'antd-mobile';
 import SearchPage from './../search/SearchPage';
 import { AppRouteName } from './../../App';
 
@@ -16,17 +16,19 @@ export default class MainPage extends React.Component {
     goSearch = () => {
         const { navigate } = this.props.navigation;
         navigate(AppRouteName.Search);
-        // Toast.info('去搜索', Toast.SHORT);
+    }
+
+    goFlexbox = () => {
+        const { navigate } = this.props.navigation;
+        navigate(AppRouteName.Flexbox);
     }
 
     render() {
-        // const { navigate } = this.props.navigation;
+
         return (
             <View style={styles.container}>
-                <Text>Open up Main.js to start working on your app!</Text>
-                <Text>Changes you make will automatically reload.</Text>
-                <Text>Shake your phone to open the developer menu.</Text>
-                <Button onClick={this.goSearch}>去搜索</Button>
+                <Button onClick={this.goSearch}>搜索</Button>
+                <Button onClick={this.goFlexbox}>Flexbox</Button>
             </View>
         );
     }
